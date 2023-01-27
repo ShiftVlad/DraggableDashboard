@@ -1,0 +1,12 @@
+<gridster [options]="options">
+  <gridster-item [item]="item" *ngFor="let item of dashboard">
+    <div class="button-holder">
+      <div class="gridster-item-content" *ngIf="item.hasContent">
+        <div class="stuff">
+          <a href="https://www.google.com" target="_blank">Link to Google</a>
+        </div>
+      </div>
+      <label *ngIf="!item.hasContent">{{ item.label }}</label>
+    </div>
+  </gridster-item>
+</gridster>
